@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Paginator Demo</title> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var rest_api = ['http://ign-apis.herokuapp.com/','?startIndex=30\u0026count=5'];
+				var art_req = rest_api.join('articles');
+				var vid_req = rest_api.join('videos')
+				var string = "http://ign-apis.herokuapp.com/" 
+				var page_builder = function(rest, type, dest_id){
+					$.get(rest, function(res) {
+						var title;
+						var subtitle;
+						var cut;
+						var list_entry = "";
+						var too_long = function(string, cut){
+							if (string.length > cut){
+								string = string.slice(0,cut) + "..."
+							}
+						};
+
+		                for (var i = 0; i < res.data.length; i ++){
+		                	list_entry += "<a href = 'http://www.ign.com/";
+		                	var x = i + 1;
+
+		                	if (type == "video"){
+		                		list_entry += "videos/";
+		                		list_entry += res.data[i].metadata.url + "'>";
+		                		title = res.data[i].metadata.title;
+		                		sub_title += "title = '" + res.data[i].metadata.longTitle + "'>";
+		                		var duration = res.data[i].metadata.duration;
+		                		cut = 24;
+		                	}else if (type == "article"){
+		                		list_entry += "articles/"
+		                		var date = res.data[i].metadata.publishDate.split('T')[0].replace(/-/g,'/')
+		                		list_entry += date + res.data[i].metadata.slug + "'>"
+		                		title = res.data[i].metadata.headline
+		                		sub_title = res.data[i].metadata.subHeadline
+		                		cut = 35;
+		                	};
+		                	list_entry += "<div class = 'd_list'";
+		                	list_entry += "background: 'url(" + data.thumbnail + " no-repeat')>";
+		                	list_entry += "<table><tr><td>"+x.toString()+"</td>";
+		                	
+		                	too_long(title, cut);
+		                	too_long(subtitle, cut);
+
+		                	list_entry += "<td><h4>" + title + "</h4><p>" + subtitle + "</p></td>";
+
+		                	if (duration){
+		                		list_entry += "<td>" + duration.toString() + "</td>";
+		                	}
+
+			                list_entry += "</tr></table</div></a>"
+			            }
+			            
+			            console.log(dest_div)
+		                $('#' + dest_div).html(list_entry);
+		        	}, "json");
+				
+		        };
+
+
+				page_builder(art_req, "article", "article_list");
+
+				$(table).hover(function(){
+					$(this).css('background-color','transparent');
+				});
+
+				var click = true;
+
+				$('#a').click(function()){
+					if (!click){
+						$('.b').hide();
+						$('.a').show();
+						click = true;
+					}
+				});
+				$('#b').click(function(){
+					$('.a').hide();
+					$('.b').show();
+					click = false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id = "menu_list">
+			<h1 id = "a">Articles</h1>
+			<h1 id = "b">Videos</h1>
+			<div id = "article_list" class = "mlist"></div>
+			<div id = "video_list" class = "mlist"></div>
+		</div>
+	</body>
+
+
+
+</html>

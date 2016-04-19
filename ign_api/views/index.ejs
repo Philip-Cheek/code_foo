@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>Paginator Demo</title> 
+  		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var rest_api = ['http://ign-apis.herokuapp.com/','?startIndex=30\u0026count='];
+				var art_req = rest_api.join('articles');
+				var vid_req = rest_api.join('videos')
+				var page_builder = function(rest, type, dest_id, count){
+					var dest_div = '#' + dest_id
+					var url = rest + count.toString();
+					$.get(url, function(res) {
+						console.log(res)
+						var title;
+						var sub_title;
+						var cut;
+						var list_entry = "";
+						var too_long = function(string, cut){
+							if (string.length > cut){
+								string = string.slice(0,cut) + "..."
+							}
+							return string;
+						};
+
+						console.log(res.data)
+		                for (var i = 0; i < res.data.length; i ++){
+		                	list_entry += "<a href = 'http://www.ign.com/";
+		                	var x = i + 1;
+
+		                	console.log(res.data[i].metadata.headline)
+		                	if (type == "video"){
+		                		list_entry += "videos/";
+		                		list_entry += res.data[i].metadata.url + "'>";
+		                		title = res.data[i].metadata.name;
+		                		sub_title = res.data[i].metadata.description;
+		                		var duration = res.data[i].metadata.duration;
+		                		cut = 42;
+		                	}else if (type == "article"){
+		                		list_entry += "articles/"
+		                		var date = res.data[i].metadata.publishDate.split('T')[0].replace(/-/g,'/')
+		                		list_entry += date + res.data[i].metadata.slug + "'>"
+		                		title = res.data[i].metadata.headline
+		                		sub_title = res.data[i].metadata.subHeadline
+		                		cut = 50;
+		                	};
+		                	list_entry += "<div class = 'd_list' id='d" + x.toString() + "'";
+		                	list_entry += "style = 'background: url(" + res.data[i].thumbnail + ")'>";
+		                	list_entry += "<table><tr><td>"+x.toString()+"</td>";
+		                	
+		                	title = too_long(title, cut);
+		                	sub_title = too_long(sub_title, cut + 8);
+
+		                	list_entry += "<td><h4>" + title + "</h4><p>" + sub_title + "</p></td>";
+
+		                	if (duration){
+		                		list_entry += "<td>" + duration.toString() + " sec</td>";
+		                	}
+
+			                list_entry += "</tr></table></div></a>"
+			                console.log(list_entry)
+			            }
+			                
+		                $(dest_div).html(list_entry);
+		        	}, "jsonp");
+				
+		        };
+
+
+				page_builder(art_req, "article", "article_list", 7);
+				page_builder(vid_req, "video", "video_list", 7);
+				$('d_list').hover(function(){
+					$('.d_list').animate({ backgroundSize: '150%' }, 3000);
+				});
+
+				var click = true;
+
+				$('#a').click(function(){
+					if (!click){
+						$('#video_list').hide();
+						$('#article_list').show();
+						click = true;
+					}
+				});
+				$('#b').click(function(){
+					$('#article_list').hide();
+					$('#video_list').show();
+					click = false;
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id = "menu_list">
+			<h1 id = "a">Articles</h1>
+			<h1 id = "b">Videos</h1>
+			<div id = "article_list"></div>
+			<div id = "video_list"></div>
+	</body>
+
+
+
+</html>
