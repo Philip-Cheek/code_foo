@@ -95,6 +95,10 @@ Dealer.prototype.sum_hand = function(){
 	}
 };
 
+Dealer.prototype.reveal_hand = function(){
+	
+}
+
 var Player = function(name){
 	this.name = name;
 	this.hand = [];
@@ -107,6 +111,8 @@ Player.prototype.see_hand = function(){
 		console.log(this.hand[i].name.toString() + " of " + this.hand[i].suite);
 	}
 }
+
+Player.sum 
 
 Player.prototype.hit = function(dealer_object)
 	this.hand.push(dealer_object.deal())
