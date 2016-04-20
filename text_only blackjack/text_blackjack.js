@@ -1,8 +1,3 @@
-var script = document.createElement('script');
-script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
-
 var Card = function(name, suite){
 	this.name = name;
 	this.sute = suite;
@@ -13,13 +8,11 @@ var Card = function(name, suite){
 	}
 };
 
-var Dealer = function(){
-	this.deck = [];
-	this.hand = [];
-	this.dough = 1000000
-};
+var Deck = function(){
+	this.stack = [];
+}
 
-Dealer.prototype.construct = function(){
+Deck.prototype.construct = function(){
 	var card_names = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
 	var suite = "spades";
 	for (i = 0; i < 4; i++){
@@ -32,13 +25,12 @@ Dealer.prototype.construct = function(){
 				suite = "diamonds"
 			};
 			var card = new Card(card_names[c], suite)
-			this.deck.push(card)
+			this.stack.push(card)
 		};
 	};
 };
 
-
-Dealer.prototype.shuffle = function(){
+Deck.prototype.shuffle = function(){
 	var i = this.deck.length - 1;
 	var swap;
 	var temp;
@@ -46,30 +38,42 @@ Dealer.prototype.shuffle = function(){
 	while (i > 0){
 		swap = Math.floor(Math.random() * i);
 
-		temp = this.deck[i];
-		this.deck[i] = this.deck[swap];
-		this.deck[swap] = temp;
+		temp = this.stack[i];
+		this.stack[i] = this.stack[swap];
+		this.stack[swap] = temp;
 
 		i--;
 	}
 };
 
-Dealer.prototype.see = function(){
+Deck.prototype.see = function(){
 	for (var i = 0; i < this.deck.length; i++){
-		console.log(this.deck[i].name.toString() + " of " + this.deck[i].suite);
+		console.log(this.stack[i].name.toString() + " of " + this.stack[i].suite);
 	}
 };
 
-Dealer.prototype.draw = function(){
-	return this.deck.pop();
+Deck.prototype.draw = function(){
+	return this.stack.pop();
 };
 
-Dealer.prototype.hit = function(){
-	this.hand.push(this.draw());
+Deck.prototype.reset = function(){
+	this.stack = [];
+};
+
+var Dealer = function(){
+	this.hand = [];
+	this.dough = 1000000
+};
+
+
+Dealer.prototype.hit = function(deck_object){
+	this.hand.push(deck_object.draw());
 });
 
-Dealer.prototype.reset = function(){
-	this.deck = [];
+Dealer.prototype.sum_hand = function(){
+	for (var i = 0; i < this.hand.length; i++){
+
+	}
 };
 
 var Player = function(name){
@@ -84,19 +88,13 @@ Player.prototype.see_hand = function(){
 	}
 }
 
-Player.prototype = function(see_)
+Player.prototype.hit = function(dealer_object)
 
-
-var sum_cards = function(card_arr){
-	var sum = 0;
-	for (var i = 0; i < card_arr.length; i++){
-		sum += car_arr.value;
-	}
-	return sum;
-	};
-};
+}
 
 var end_user;
+var dealer;
+var deck;
 
 $(#formy).submit(function(){
 	var name = $(#name).val();
@@ -105,25 +103,11 @@ $(#formy).submit(function(){
 });
 
 $(#start).click(function(){
-	this.dealer.construct();
-	this.dealer.shuffle();
-	this.dealer.draw();
-	$(#log).append("deal")
-}):
+	dealer = new Dealer;
+	deck = new Deck;
+	deck.construct();
+	dealer.hit();
+});
 
 
-BlackJack.prototype.start = function(){
-	this.dealer.construct();
-	this.dealer.shuffle();
-	console.log('let\'s get started!')
-}
-
-BlackJack.prototype.dealer_draw = function(){
-	this.dealer.hand.push(this.dealer.draw());
-}
-
-BlackJack.prototype.player_draw = function(){
-	this.player.hand.push(this.dealer.draw());
-	console.log('')
-}
 
