@@ -100,6 +100,7 @@ var Dealer = function(){
 
 Dealer.prototype.deal = function(){
 	this.deck.draw();
+	return this;
 }
 
 Dealer.prototype.start = function(){
@@ -110,6 +111,7 @@ Dealer.prototype.start = function(){
 
 Dealer.prototype.hit = function(){
 	this.hand.push(this.deal());
+	return this;
 });
 
 Dealer.prototype.hand_value = function(){
@@ -128,9 +130,12 @@ var Player = function(name){
 }
 
 Player.prototype.see_hand = function(){
+	var arr;
 	for (var i = 0; i < this.hand.length; i++){
-		console.log(this.hand[i].name.toString() + " of " + this.hand[i].suite);
+		arr.push(this.hand[i].name.toString() + " of " + this.hand[i].suite);
 	}
+
+	return arr;
 }
 
 Player.prototype.hand_value = function(){
@@ -139,10 +144,10 @@ Player.prototype.hand_value = function(){
 
 Player.prototype.hit = function(dealer_object)
 	this.hand.push(dealer_object.deal())
+	return this;
 }
 
 var end_user;
-var dealer;
 
 $(#formy).submit(function(){
 	var name = $(#name).val();
@@ -154,10 +159,16 @@ $(#start).click(function(){
 	dealer = new Dealer;
 	deck = new Deck;
 	
-	dealer.start();
-	$(#card)
+	dealer.start().hit()
+	end_user.hit()
+
+	var log = end_user.see_cards();
+
 });
 
-$(#)
+$(#hit).click(function(){
+	end_user.hit()
+	var dealer_quandary = 
+});
 
 
