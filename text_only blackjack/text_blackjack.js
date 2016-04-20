@@ -108,8 +108,8 @@ Dealer.prototype.start = function(){
 	return this;
 };
 
-Dealer.prototype.hit = function(deck_object){
-	this.hand.push(deck_object.draw());
+Dealer.prototype.hit = function(){
+	this.hand.push(this.deal());
 });
 
 Dealer.prototype.hand_value = function(){
