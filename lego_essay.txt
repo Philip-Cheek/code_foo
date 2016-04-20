@@ -2,29 +2,68 @@ Lego Golden Gate Bridge
 Lego Count: approx.  9,654,543 Legos
 
 
-So, if I’m parsing this scenario correctly, some dire catastrophe beckoned The Avengers to travel to the oft-neglected (by superheroes, that is) West Coast - San Fran in particular - wherein some Herculeun skirmish ensued, leaving much devestation and property damage in its wake. Not even the Golden Gate bridge, immortal icon of the city, managed to escape the ruin. It now stands forsaken and in shambles. The whole thing needs to be scrapped and rebuilt. 
-	Of course, The Avengers go on their merry way, shrugging off the incident entirely. And that doesn’t sit well at all. Not with the citizens of San Francisco and its respective larger metro area it doesn’t. Poor Micheal Krasny of KQED’s Forum has had to put up with phone call after phone call from enraged and righteous San Francisconians. 
-	“The Avengers may get away with that schtick on the East Coast, but if they think they can just come here, and destroy every last god-for-saken...” 
-	“With real estate as scares as it already was, I just can’t believe the tolerance for that sort of behavior...”
-	“And let me just say that the whole thing speaks to the larger military industrial complex, really. Keep us scared, keep us...”
-	And so forth. 
-	Tony Stark, ever impatiant with the tepid, totebag-swinging, public-radio-listening type as he is, decides to spite the city by pubicly agreeing to tear down the remnants of the Golden Gate and rebuild the bridge on his own dime, whilst privately acknowledging to his fellow Avengers, much to their amusement, that he’s planning to build the whole thing purely out of Legos - and it’s up to me to hazard an educated guess as to how many individual legos will be required to accomplish such a feat. 
-	First off, let me state that I’m going to assume that this Lego bridge will not be functional in any way, at least as it pertains to motor vehicles safely crossing the span of the bridge. My estimation will mostly be concerned with volumetric space consumed - not density. I’m not a civil engineer by any stretch of the imagination, but I assume that denisty of materials is probably a thing. I’m not being fancy; my literal thought is, “Cars are heavy. Legos are not heavy.” A sheet of legos also contains more points of possible breakage than it does legos. 
-	I would also imagine an engineer would research every single component that it took to build the original Golden Gate and log their demensions, and then research different lego variations and log their respective demensions, before performing applying equations derived from some variant of multi-variable calculus that I never learned to ascertain an accurate guess.
-	But that takes a lot of time, and I’m under a very tight deadline (why couldn’t I have noticed this any sooner? Why God, why?). Plus, I’m more of a programmer in mindset, and I know what it’s like to have to employ hack-y heuristics to toe past the finish line, so that’s what I’m going to do. 
-	Now, I know of an exhibit called Brick-By-Brick at Chicago’s Museum of Science and Industry that features the incredible and accurately scaled miniatures of real life engineering marvels, courtesy of engineering extroardinaire, Adam Reed. It just so happens that this exhibit’s centerpiece is none other than the Golden Gate bridge. Also, all of the miniatures are made completely out of Legos. 
-	So now the problem has morphed from a complex problem into a simple one. Adam Reed used almost exactly 64,500 legos to build a Golden Gate replica with a length of 60 feet to a reasonably accurate scale. 
-	The real Golden Gate Bridge has a length of 2737.4 meters There are .3048 meters to every foot, so the lego miniature has a length of 18.288 meters. Now we have a reasonable proportion, so we can just perform a simple operation. 
+So, if I’m parsing this scenario correctly, some dire catastrophe beckoned The Avengers to travel to the oft-neglected (by
+superheroes, that is) West Coast - San Fran in particular - wherein some Herculeun skirmish ensued, leaving much
+devestation and property damage in its wake. Not even the Golden Gate bridge, immortal icon of the city, managed to escape
+the ruin. It now stands forsaken and in shambles. The whole thing needs to be scrapped and rebuilt. 
+
+Of course, The Avengers go on their merry way, shrugging off the incident entirely. And that doesn’t sit well at all. Not
+with the citizens of San Francisco and its respective larger metro area it doesn’t. Poor Micheal Krasny of KQED’s Forum has
+had to put up with phone call after phone call from enraged and righteous San Francisconians. 
+
+“The Avengers may get away with that schtick on the East Coast, but if they think they can just come here, and destroy
+every last god-for-saken...” 
+
+“With real estate as scares as it already was, I just can’t believe the tolerance for that sort of behavior...”
+
+“And let me just say that the whole thing speaks to the larger military industrial complex, really. Keep us scared, keep u
+...”
+	
+And so forth. 
+
+Tony Stark, ever impatiant with the tepid, totebag-swinging, public-radio-listening type as he is, decides to spite the 
+city by pubicly agreeing to tear down the remnants of the Golden Gate and rebuild the bridge on his own dime, whilst 
+privately acknowledging to his fellow Avengers, much to their amusement, that he’s planning to build the whole thing purely
+out of Legos - and it’s up to me to hazard an educated guess as to how many individual legos will be required to accomplish
+such a feat. 
+
+First off, let me state that I’m going to assume that this Lego bridge will not be functional in any way, at least as it 
+pertains to motor vehicles safely crossing the span of the bridge. My estimation will mostly be concerned with volumetric 
+space consumed - not density. I’m not a civil engineer by any stretch of the imagination, but I assume that denisty of 
+materials is probably a thing. I’m not being fancy; my literal thought is, “Cars are heavy. Legos are not heavy.” A sheet 
+of legos also contains more points of possible breakage than it does legos. 
+
+I would also imagine an engineer would research every single component that it took to build the original Golden Gate and 
+log their demensions, and then research different lego variations and log their respective demensions, before performing 
+applying equations derived from some variant of multi-variable calculus that I never learned to ascertain an accurate guess
+.
+
+But that takes a lot of time, and I’m under a very tight deadline (why couldn’t I have noticed this any sooner? Why God, 
+why?). Plus, I’m more of a programmer in mindset, and I know what it’s like to have to employ hack-y heuristics to toe past
+the finish line, so that’s what I’m going to do. 
+	
+Now, I know of an exhibit called Brick-By-Brick at Chicago’s Museum of Science and Industry that features the incredible 
+and accurately scaled miniatures of real life engineering marvels, courtesy of engineering extroardinaire, Adam Reed. It 
+just so happens that this exhibit’s centerpiece is none other than the Golden Gate bridge. Also, all of the miniatures are 
+made completely out of Legos. 
+	
+So now the problem has morphed from a complex problem into a simple one. Adam Reed used almost exactly 64,500 legos to 
+build a Golden Gate replica with a length of 60 feet to a reasonably accurate scale. The real Golden Gate Bridge has a
+length of 2737.4 meters There are .3048 meters to every foot, so the lego miniature has a length of 18.288 meters. Now we 
+have a reasonable proportion, so we can just perform a simple operation. 
+
 64,500/ 18.288 = L /2737.4
-	So my estimation is that you would need at least 9,654,543 legos. 
-Of course, the bigger a replica gets, the more detail you can embellish with lego pieces, so the number is more likely north of 10 million, but I enjoy the specificity of my first count. Besides, I built a little program to help me out. 
+
+So my estimation is that you would need at least 9,654,543 legos. Of course, the bigger a replica gets, the more detail you
+can embellish with lego pieces, so the number is more likely north of 10 million, but I enjoy the specificity of my first 
+count. Besides, I built a little program to help me out. 
 
 if lego_arr.length < golden_gate.split(bolt).length{
 	while lego_arr.join().toBridge() != golden_gate{
 		lego_arr.push(lego);
 	}
-	}
+}
 
-	Fine. Well, Tony’s a genius. He can figure it out. 
+Fine. Well, Tony’s a genius. He can figure it out. 
 
-Phil
+- Phil
