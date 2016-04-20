@@ -2,8 +2,8 @@ Lego Golden Gate Bridge
 Lego Count: approx.  9,654,543 Legos
 
 
-So, if I’m parsing this scenario correctly, some dire catastrophe beckoned The Avengers to travel to the oft-neglected (by
-superheroes, that is) West Coast - San Fran in particular - wherein some Herculeun skirmish ensued, leaving much
+So, if I’m parsing this scenario correctly, some dire catastrophe gave The Avengers cause to travel to the oft-neglected 
+(by superheroes, that is) West Coast - San Fran in particular - wherein some Herculeun skirmish ensued, leaving much
 devestation and property damage in its wake. Not even the Golden Gate bridge, immortal icon of the city, managed to escape
 the ruin. It now stands forsaken and in shambles. The whole thing needs to be scrapped and rebuilt. 
 
@@ -21,7 +21,7 @@ every last god-for-saken...”
 	
 And so forth. 
 
-Tony Stark, ever impatiant with the tepid, totebag-swinging, public-radio-listening type as he is, decides to spite the 
+Tony Stark, ever impatiant with the tepid, totebag-swinging, public-radio-listening type, decides to spite the 
 city by pubicly agreeing to tear down the remnants of the Golden Gate and rebuild the bridge on his own dime, whilst 
 privately acknowledging to his fellow Avengers, much to their amusement, that he’s planning to build the whole thing purely
 out of Legos - and it’s up to me to hazard an educated guess as to how many individual legos will be required to accomplish
@@ -34,9 +34,9 @@ materials is probably a thing. I’m not being fancy; my literal thought is, “
 of legos also contains more points of possible breakage than it does legos. 
 
 I would also imagine an engineer would research every single component that it took to build the original Golden Gate and 
-log their demensions, and then research different lego variations and log their respective demensions, before performing 
-applying equations derived from some variant of multi-variable calculus that I never learned to ascertain an accurate guess
-.
+log their demensions, and then research different lego variations and log their respective demensions, before applying 
+equations derived from some variant of multi-variable calculus that I never learned so as to ascertain an accurate 
+approximation of just how many legos are going to be required for such a feat.
 
 But that takes a lot of time, and I’m under a very tight deadline (why couldn’t I have noticed this any sooner? Why God, 
 why?). Plus, I’m more of a programmer in mindset, and I know what it’s like to have to employ hack-y heuristics to toe past
@@ -56,7 +56,7 @@ have a reasonable proportion, so we can just perform a simple operation.
 
 So my estimation is that you would need at least 9,654,543 legos. Of course, the bigger a replica gets, the more detail you
 can embellish with lego pieces, so the number is more likely north of 10 million, but I enjoy the specificity of my first 
-count. Besides, I built a little program to help me out. 
+count. Besides, I built a little program to help me out with the remaining legos. 
 
 if lego_arr.length < golden_gate.split(bolt).length{
 	while lego_arr.join().toBridge() != golden_gate{
