@@ -1,6 +1,6 @@
 var Card = function(name, suite){
 	this.name = name;
-	this.sute = suite;
+	this.suite = suite;
 	if (Number.isInteger(this.name)){
 		this.value = this.name;
 	}else{
@@ -11,6 +11,29 @@ var Card = function(name, suite){
 		}
 	}
 };
+
+var sum_hand = function(card_arr){
+	var sum = 0;
+	var ace_sum;
+
+	for (var i = 0; i < card_arr.length; i ++ ){
+		if (card_arr[i].name == 'ace' && Array.isArray(card_arr[i].value)){
+			ace_sum = sum;
+			sum += 1;
+			ace_sum += 11;
+		}else{
+			sum += card_arr[i].value 
+		}
+	}
+
+	if (ace_sum){
+		return {"ace_1": sum, "ace_11": ace_sum}
+	}else{
+		return sum;
+	};
+}
+
+
 
 var Deck = function(){
 	this.stack = [];
@@ -89,14 +112,12 @@ Dealer.prototype.hit = function(deck_object){
 	this.hand.push(deck_object.draw());
 });
 
-Dealer.prototype.sum_hand = function(){
-	for (var i = 0; i < this.hand.length; i++){
-
-	}
+Dealer.prototype.hand_value = function(){
+	return sum_hand(this.hand)
 };
 
 Dealer.prototype.reveal_hand = function(){
-	
+
 }
 
 var Player = function(name){
@@ -112,7 +133,9 @@ Player.prototype.see_hand = function(){
 	}
 }
 
-Player.sum 
+Player.prototype.hand_value = function(){
+	return sum_hand(this.hand)
+}
 
 Player.prototype.hit = function(dealer_object)
 	this.hand.push(dealer_object.deal())
