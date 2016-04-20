@@ -4,7 +4,11 @@ var Card = function(name, suite){
 	if (Number.isInteger(this.name)){
 		this.value = this.name;
 	}else{
-		this.value = 10;
+		if{this.name != "ace"}
+			this.value = 10;
+		}else{
+			this.value = [1, 11];
+		}
 	}
 };
 
@@ -71,6 +75,10 @@ var Dealer = function(){
 	this.deck = new Deck();
 };
 
+Dealer.prototype.deal = function(){
+	this.deck.draw();
+}
+
 Dealer.prototype.start = function(){
 	this.deck.construct();
 	this.deck.shuffle();
@@ -90,6 +98,7 @@ Dealer.prototype.sum_hand = function(){
 var Player = function(name){
 	this.name = name;
 	this.hand = [];
+	player.dough = 100
 
 }
 
@@ -100,7 +109,7 @@ Player.prototype.see_hand = function(){
 }
 
 Player.prototype.hit = function(dealer_object)
-
+	this.hand.push(dealer_object.deal())
 }
 
 var end_user;
@@ -116,9 +125,10 @@ $(#start).click(function(){
 	dealer = new Dealer;
 	deck = new Deck;
 	
-	dealer.start().hit();
-	
+	dealer.start();
+	$(#card)
 });
 
+$(#)
 
 
