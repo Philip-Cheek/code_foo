@@ -70,7 +70,7 @@ $(document).ready(function(){
             	list_entry += "<td><h4>" + title + "</h4>"
 
             	if (sub_title){
-            		sub_title = too_long(sub_title, cut + 8);
+            		sub_title = too_long(sub_title, cut);
             		list_entry += "<p>" + sub_title;
             	};
 
@@ -113,7 +113,10 @@ $(document).ready(function(){
 	//we have to use document.on for our animation effect, 
 	//because we have to make sure these functions don't interact with
 	//something may not have been loaded, and $get is, I believe, asynchronous
-	//and will ignore our otherwise linear commands. 
+	//and will ignore the flow of our otherwise linear commands. 
+
+	//weirdly enough, the css table hover works right off the bat, I suppose, because it's not
+	//reliant on an image to be loaded. 
 
 	$(document).on({
 		mouseenter: function () {

@@ -17,12 +17,7 @@ body {
     background-color: black;
 }
 
-#top{
-	display: block;
-	max-width:500em;
-	border: 1px solid white;
-	height:10vh;
-}
+
 #container{
 	min-width: 26.5em;
 	max-width:100%;
