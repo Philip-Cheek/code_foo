@@ -1,3 +1,8 @@
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 var Card = function(name, suite){
 	this.name = name;
 	this.sute = suite;
@@ -59,9 +64,9 @@ Dealer.prototype.draw = function(){
 	return this.deck.pop();
 };
 
-Dealer.prototype.get_hand = function(){
-	
-}
+Dealer.prototype.hit = function(){
+	this.hand.push(this.draw());
+});
 
 Dealer.prototype.reset = function(){
 	this.deck = [];
@@ -73,23 +78,38 @@ var Player = function(name){
 
 }
 
-Player.prototype = function(see_hand){
+Player.prototype.see_hand = function(){
 	for (var i = 0; i < this.hand.length; i++){
 		console.log(this.hand[i].name.toString() + " of " + this.hand[i].suite);
 	}
 }
 
-var BlackJack = function(player_object, dealer_object){
-	this.player = player_object;
-	this.dealer = dealer_object;
-	var sum_cards = function(card_arr){
-		var sum = 0;
-		for (var i = 0; i < card_arr.length; i++){
-			sum += car_arr.value;
-		}
-		return sum;
+Player.prototype = function(see_)
+
+
+var sum_cards = function(card_arr){
+	var sum = 0;
+	for (var i = 0; i < card_arr.length; i++){
+		sum += car_arr.value;
+	}
+	return sum;
 	};
 };
+
+var end_user;
+
+$(#formy).submit(function(){
+	var name = $(#name).val();
+	end_user = new Player(name);
+	return false;
+});
+
+$(#start).click(function(){
+	this.dealer.construct();
+	this.dealer.shuffle();
+	this.dealer.draw();
+	$(#log).append("deal")
+}):
 
 
 BlackJack.prototype.start = function(){
