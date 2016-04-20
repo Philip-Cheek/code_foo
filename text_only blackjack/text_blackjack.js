@@ -44,12 +44,16 @@ Deck.prototype.shuffle = function(){
 
 		i--;
 	}
+
+	return this;
 };
 
 Deck.prototype.see = function(){
 	for (var i = 0; i < this.deck.length; i++){
 		console.log(this.stack[i].name.toString() + " of " + this.stack[i].suite);
 	}
+
+	return this;
 };
 
 Deck.prototype.draw = function(){
@@ -58,13 +62,20 @@ Deck.prototype.draw = function(){
 
 Deck.prototype.reset = function(){
 	this.stack = [];
+	return this;
 };
 
 var Dealer = function(){
 	this.hand = [];
 	this.dough = 1000000
+	this.deck = new Deck();
 };
 
+Dealer.prototype.start = function(){
+	this.deck.construct();
+	this.deck.shuffle();
+	return this;
+};
 
 Dealer.prototype.hit = function(deck_object){
 	this.hand.push(deck_object.draw());
@@ -94,7 +105,6 @@ Player.prototype.hit = function(dealer_object)
 
 var end_user;
 var dealer;
-var deck;
 
 $(#formy).submit(function(){
 	var name = $(#name).val();
@@ -105,8 +115,9 @@ $(#formy).submit(function(){
 $(#start).click(function(){
 	dealer = new Dealer;
 	deck = new Deck;
-	deck.construct();
-	dealer.hit();
+	
+	dealer.start().hit();
+	
 });
 
 
