@@ -1,0 +1,143 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: arial;
+	font-size:.99em;
+}
+
+a{
+	text-decoration: none;
+}
+
+body { 
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 10% 20%; 
+    background-color: black;
+}
+
+#top{
+	display: block;
+	max-width:500em;
+	border: 1px solid white;
+	height:10vh;
+}
+#container{
+	min-width: 26.5em;
+	max-width:100%;
+	height:100%;
+	position: relative;
+	border: 1px solid white;
+	display: block;
+	content:"";
+}
+#menu_list{
+	width:27em;
+	overflow: hidden;
+	padding-top: 1em;
+	background-color: white;
+	position: absolute;
+	border-radius: .5em;
+	position: absolute;
+	right:0em;
+	top:0em;
+	height:97%;
+	margin-left:-1.5em;
+	overflow-y:scroll;
+
+}
+
+#article_list a{
+	height:5em;
+}
+#article_list{
+	padding: 0em;
+	margin-top:.3em;
+}
+#video_list{
+	display:none;
+}
+
+#video_list div{
+	height:5em;
+}
+#article_list div{
+	height:5em;
+}
+
+.d_list{
+	height:5em;
+}
+
+table{
+	background-color: white;
+	height:5em;
+	width:30em;
+	margin-top: -1.01em;
+}
+
+table:hover{
+	background-color: rgba(128,128,128,.5);
+	color:white;
+}
+
+table tr{
+	height:5em;
+}
+
+#head_list{
+	cursor:pointer;
+	border: .2em #CF000F solid;
+	height:3em;
+	margin:.2em;
+	width:20em;
+	text-align: center;
+	border-radius:3em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom:1em;
+}
+
+#op1{
+	padding:0em;
+	display: inline-block;
+	background-color:#CF000F;
+	height:3.3em;
+	width: 10em;
+	overflow: hidden;
+	color:white;
+	position:absolute;
+	left:0em;
+}
+
+	#a{
+		margin-top:.7em;
+	}
+#op2{
+	padding:0em;
+	display: inline-block;
+	background-color:white;
+	height:3.3em;
+	width: 10em;
+	overflow: hidden;
+	right:0em;
+	color:#CF000F;
+	position:absolute;
+}
+	#v{
+		margin-top:.7em;
+		margin-left:-2.3em;
+	}
+
+.see_more{
+	margin: 1em;
+	padding: .1em;
+	background-color: white;
+	height:3em;
+	width: 3em;
+	text-align: center;
+}
+

@@ -1,0 +1,19 @@
+"data":[{"thumbnail":"http://assets1.ignimgs.com/2016/03/27/oculus-12802jpg-c755cb_compact.jpg",
+"metadata":{
+	"headline":"Make Your Own Oculus Rift Game With Roblox",
+	"networks":["ign"],
+	"state":"published",
+	"slug":"make-your-own-oculus-rift-game-with-roblox",
+	"subHeadline":"Make games, earn money.",
+	"publishDate":"2016-04-15T23:29:22+0000","articleType":"article"}},
+	
+{"thumbnail":"http://assets1.ignimgs.com/2016/03/18/thumbjpg-19d801_compact.jpg",
+"metadata":{
+	"headline":"2 More Backward Compatible Games Come to Xbox",
+	"networks":["ign"],
+	"state":
+	"published",	
+	"slug":"2-more-backward-compatible-games-come-to xbox","publishDate":"2016-04-15T23:27:28+0000",
+	"articleType":"article"}}
+
+,{"thumbnail":"http://assets2.ignimgs.com/2016/04/15/ww1jpg-65267e_compact.jpg","metadata":{"headline":"Fallout 4: Wasteland Workshop DLC Review","networks":["ign"],"state":"published","slug":"fallout-4-wasteland-workshop-dlc-review","headerImageUrl":"http://assets1.ignimgs.com/2016/04/15/ww2jpg-652686.jpg","headerVideoUrl":"http://www.ign.com/videos/2016/04/15/fallout-4-wasteland-workshop-dlc-review","subHeadline":"A mishmash of settlement upgrades and useless monsters. ","publishDate":"2016-04-15T23:25:07+0000","articleType":"article"}},{"thumbnail":"http://assets1.ignimgs.com/2016/04/15/alicia1280jpg-652695_compact.jpg","metadata":{"headline":"Fear the Walking Dead: Can Any Strangers Be Trusted? ","networks":["ign"],"state":"published","slug":"fear-the-walking-dead-can-any-strangers-be-trusted","subHeadline":"Check out an exclusive new clip and learn about the escalating zombie threat on the series. ","publishDate":"2016-04-15T23:23:03+0000","articleType":"article"}},{"thumbnail":"http://assets2.ignimgs.com/2013/11/20/gtafxjpg-885532_compact.jpg","metadata":{"headline":"GTA Online: Weekly Update and New Custom Car Coming","networks":["ign"],"state":"published","slug":"gta-online-weekly-update-and-new-custom-car-coming","publishDate":"2016-04-15T23:17:44+0000","articleType":"article"}},{"thumbnail":"http://assets1.ignimgs.com/2016/04/15/pikachumodeljpg-652638jpg-68485d_compact.jpg","metadata":{"headline":"Yummy Mart Releasing Line of Pokemon Lingerie","networks":["ign"],"state":"published","slug":"yummy-mart-releasing-line-of-pokemon-lingerie-2","publishDate":"2016-04-15T22:35:11+0000","articleType":"article"}},{"thumbnail":"http://assets2.ignimgs.com/2015/10/12/h5jpg-9b32b2_compact.jpg","metadata":{"headline":"Halo 5 Warzone Firefight Beta Extended","networks":["ign"],"state":"published","slug":"halo-5-warzone-firefight-beta-extended","subHeadline":"The full edition will be released this summer.","publishDate":"2016-04-15T22:18:45+0000","articleType":"article"}}]}
