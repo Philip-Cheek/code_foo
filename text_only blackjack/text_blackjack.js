@@ -33,8 +33,6 @@ var sum_hand = function(card_arr){
 	};
 }
 
-
-
 var Deck = function(){
 	this.stack = [];
 }
@@ -149,6 +147,10 @@ Player.prototype.hit = function(dealer_object)
 
 var end_user;
 
+var from_21 = function(number){
+	return number - 21;
+}
+
 $(#formy).submit(function(){
 	var name = $(#name).val();
 	end_user = new Player(name);
@@ -163,12 +165,27 @@ $(#start).click(function(){
 	end_user.hit()
 
 	var log = end_user.see_cards();
+	$(#log).append("<p>You dealer hath done dealt. Your cards:</p>")
+	for (var x = 0; x < log.length; x++){
+		$(#log).append(log[x]);
+	};
+	var sum = end_user.hand_value
+	if (typeof sum == 'object'){
+		$(#log).append("<p>" + from_21(sum['ace_1']).toString() + "f rom 21, if ace is 1</p>")
+		$(#log).append("<p>" + from_21(sum['ace_11']).toString() + "from 21, if ace is 11</p>")
+	}
 
 });
 
 $(#hit).click(function(){
 	end_user.hit()
-	var dealer_quandary = 
+
+	var dealer_quandary = dealer.hand_value();
+	if (typeof dealer_quandary == 'object'){
+		if (from_21(dealer_quandary['ace_11'] != 0){
+
+		}
+	}
 });
 
 
