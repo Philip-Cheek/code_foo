@@ -92,13 +92,11 @@ var Deck = function(){
 
 var Dealer = function(){
 	this.hand = [];
-	this.dough = 1000000
 	this.deck = new Deck();
 };
 
 	Dealer.prototype.deal = function(){
-		this.deck.draw();
-		return this;
+		return this.deck.draw()
 	}
 
 	Dealer.prototype.start = function(){
@@ -107,8 +105,8 @@ var Dealer = function(){
 		return this;
 	};
 
-	Dealer.prototype.hit = function(){
-		this.hand.push(this.deal());
+	Dealer.prototype.hit = function(draw){
+		this.hand.push(draw);
 		return this;
 	});
 
@@ -116,9 +114,6 @@ var Dealer = function(){
 		return sum_hand(this.hand)
 	};
 
-	Dealer.prototype.reveal_hand = function(){
-
-	}
 
 var Player = function(name){
 	this.name = name;
@@ -140,12 +135,18 @@ var Player = function(name){
 		return sum_hand(this.hand)
 	}
 
-	Player.prototype.hit = function(dealer_object)
-		this.hand.push(dealer_object.deal())
+	Player.prototype.hit = function(card)
+		this.hand.push(card)
+		return this;
+	}
+
+	Player.prototype.lose_bet = function(bet){
+		this.dough -= bet;
 		return this;
 	}
 
 var end_user;
+var dealer;
 
 var from_21 = function(number){
 	return number - 21;
@@ -159,10 +160,9 @@ $(#formy).submit(function(){
 
 $(#start).click(function(){
 	dealer = new Dealer;
-	deck = new Deck;
 	
 	dealer.start().hit()
-	end_user.hit()
+	end_user.hit(dealer.deal())
 
 	$(#dough_box).html("<p class = 'user_dough'" + user.dough.toString() + "</p>")
 	var log = end_user.see_cards();
@@ -179,7 +179,7 @@ $(#start).click(function(){
 });
 
 $(#hit).click(function(){
-	end_user.hit()
+	end_user.hit(dealer.deal())
 	var user_sum = end_user.sum_hand()
 
 	var dealer_quandary = dealer.hand_value();
